@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LetsChat</title>
+    <!-- defer used, so that firstly main html DOM page loads then javascript will be loaded-->
+    <script defer src="/socket.io/socket.io.js"></script>
+    <!--this is 1st step after declaring var io = require('socket.io')(server), 2nd step is in client.js-->
+
+    <script defer src="frontend/frontend_js/client.js"></script>
+    <link rel="stylesheet" href="frontend/frontend_css/style.css">
+    <!--frontend named folder must be in exactly same folder where index.html and index.js are present-->
+</head>
+
+<body>
+    <div class="nav">
+        <div id="navimg">
+            <img class="logo" src="frontend/frontend_medias/logo.jpg" alt="LogoHere">
+        </div>
+        <div id="navtext">LSC : Lets Start Chat</div>
+    </div>
+
+    <div class="messageContainer">
+        <div id="username"></div>
+        <hr>
+        <!-- <div class="messages right">Hello! Good Morning.</div>
+        <div class="messages left">Hi , very good Morning Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda tempore architecto facere illum aperiam deleniti fugit velit quae! Eius, sit.</div> -->
+    </div>
+    <div class="send-box">
+        <form action="#" id="formContainer">
+            <input type="text" name="inputMessage" id="inputMessage"
+                placeholder="Type message Here and click on Send button or Press Enter.">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

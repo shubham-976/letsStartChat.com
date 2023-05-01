@@ -1,0 +1,180 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background: rgba(0,0,0,0.2) url('/frontend/frontend_medias/background.jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+/* NAVIGATION BAR */
+.nav{
+    display: flex;
+    /* border: 2px solid red; */
+    background-color: rgb(36, 35, 35);
+    justify-content: center;
+    align-items: center;
+    /* width:60%; */
+    margin:auto;
+    padding:3px;
+}
+#navimg img{
+    /* border: 2px solid lime; */
+    width:60px;
+    height:60px;
+}
+#navtext{
+    /* border: 2px solid black; */
+    /* width:45%; */
+    padding:5px 4px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.logo{
+    height:100%;
+    display: block;
+    margin: auto;
+}
+/* MESSAGE DISPLAY BOX */
+.messageContainer{
+    background:url('/frontend/frontend_medias/messageBoxBg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:70%;
+    border:1px solid white;
+    border-radius: 18px;
+    margin:auto;
+    height: 80vh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    /* overflow-x:hidden; */
+    margin-bottom: 5px;
+    margin-top: 10px; 
+}
+#username{
+    /* border:1px solid gainsboro; */
+    color: white;
+    padding:4px 3px;
+    text-align: center;
+    font-weight: bold;
+}
+.messages{
+    padding:7px 10px;
+    margin:5px 8px;
+    max-width:40%;
+    color: white;
+    border: 1.5px solid #f5f5f7;
+    box-shadow: 2px 4px 12px rgb(0 0 0 / 8%);
+    border-radius: 14px;
+    white-space:normal;
+}
+.left{  /*when others messages received*/
+    border: 1.5px solid lime;
+    float: left;
+    clear:both;
+}
+.left2{  /*used only when some ONE LEFT OR JOINED the chat.*/
+    border: 1.5px dashed rgb(251, 140, 89);
+    float: left;
+    clear:both;
+}
+.right{  /*when our message sent*/
+    border: 1.5px solid rgb(77, 212, 250);
+    float: right;
+    clear:both;
+}
+/* SEND MESSAGE INPUT  */
+.send-box{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid green; */
+    padding:7px;
+}
+#formContainer{
+    /* border: 1px solid red; */
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+#inputMessage{
+    width:80%;
+    padding:1vmax 2vmax;
+    font-weight: 400;
+    font-size: 1.1vmax;
+}
+.btn{
+    cursor:pointer;
+    padding: 1vmax 2vmax;
+    font-weight: bold;
+    background-color: rgb(191, 5, 132);
+    color: white;
+}
+.btn:hover{
+    background-color: rgb(218, 4, 150);
+    color: lime;
+}
+
+/* For ResponsiveNess */
+@media only screen and (max-width: 750px){
+    .messageContainer{
+        width:80%;
+    }
+    .send-box{
+        width:75%;
+    }
+    .messages{
+        font-size: 14px;
+        max-width: 45%;
+    }
+    #navtext{
+        font-size: 1.6rem;
+    }
+    #inputMessage{
+        width:75%;
+        padding:1.7vmax 2.2vmax;
+        font-weight: 400;
+        font-size: 1.9vmax;
+    }
+    .btn{
+        padding: 1.2vmax 2.2vmax;
+    }
+}
+@media only screen and (max-width: 450px){
+    .messageContainer{
+        width:90%;
+    }
+    .send-box{
+        width:80%;
+    }
+    .messages{
+        font-size: 12px;
+        max-width: 55%;
+    }
+    #navtext{
+        font-size: 1.3rem;
+    }
+    #inputMessage{
+        width:80%;
+        padding:2vmax 3vmax;
+        font-weight: 400;
+        font-size: 2vmax;
+    }
+}
+@media only screen and (max-width: 285px){
+    .nav{
+        flex-direction: column;
+    }
+    #navimg img{
+        /* border: 2px solid lime; */
+        width:50px;
+        height:50px;
+    }
+    #inputMessage{
+        width:80%;
+        padding:2vmax 3vmax;
+        font-weight: 400;
+        font-size: 2vmax;
+    }
+}
